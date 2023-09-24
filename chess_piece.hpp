@@ -1,5 +1,4 @@
 #include <SFML/Graphics.hpp>
-// #include "chess_board.hpp"
 using namespace sf;
 
 struct Piece
