@@ -1,7 +1,6 @@
 #include "chess_window.hpp"
 
 
-
 /*
 Sets Tile Position and Size
 */
@@ -265,7 +264,6 @@ bool ChessWindow::update()
                         tile_coords[1] = mouse_pos_y;
                         tiles[mouse_pos_x][mouse_pos_y].setFillColor(Color(168, 202, 68));
                         highlight = 1;
-                        std::cout << piece_type  << std::endl;
                     }
                 }
                 else
@@ -279,15 +277,6 @@ bool ChessWindow::update()
                     {
                         if(is_valid_kill( tile_coords[0], tile_coords[1], mouse_pos_x, mouse_pos_y, chess_board.turn))
                         {
-                            std::cout << "Position of New Tile: " << std::endl;
-                            std::cout << mouse_pos_x << std::endl;
-                            std::cout << mouse_pos_y << std::endl;
-
-                            std::cout << "Position of Old Tile: " << std::endl;
-                            std::cout << tile_coords[0] << std::endl;
-                            std::cout << tile_coords[1]  << std::endl;
-
-                            
 
                             chess_board.board[mouse_pos_x][mouse_pos_y] = chess_board.board[tile_coords[0]][tile_coords[1]];
                             chess_board.board[tile_coords[0]][tile_coords[1]] = -1;

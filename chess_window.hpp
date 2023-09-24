@@ -4,9 +4,6 @@
 #include "chess_piece.hpp"
 using namespace sf;
 
-// testing something 
-#include <iostream>
-
 
 class ChessWindow{
     private:
